@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { reduxForm, Field } from 'redux-form';
 import { compose } from 'redux';
 import { connect } from 'react-redux';
+import { Button } from 'reactstrap';
+
 import * as actions from '../../actions';
 
 class Signup extends Component {
@@ -37,7 +39,7 @@ class Signup extends Component {
                 <div>
                     { this.props.errorMessage }
                 </div>
-                <button>Sign Up</button>
+                <Button color="primary">Sign Up</Button>
             </form>
         );
     }
