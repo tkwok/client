@@ -2,15 +2,14 @@ import React, { Component } from 'react';
 import { reduxForm, Field } from 'redux-form';
 import { compose } from 'redux';
 import { connect } from 'react-redux';
-import { Button } from 'reactstrap';
+import { Button, Container, Row, Col } from 'reactstrap';
 
 import * as actions from '../../actions';
-
 class Signin extends Component {
 
     onSubmit = (formProps) => {
         this.props.signin(formProps, () => {
-            this.props.history.push('/feature');
+            this.props.history.push('/dashboard');
         });
     }
 
@@ -18,6 +17,9 @@ class Signin extends Component {
         const { handleSubmit } = this.props;
 
         return (
+            <Container fluid>
+            <Row>        
+                <Col>  
             <form onSubmit={handleSubmit(this.onSubmit)}>
                 <fieldset>
                     <label>Email</label>
@@ -41,6 +43,9 @@ class Signin extends Component {
                 </div>
                 <Button color="primary">Sign In</Button>
             </form>
+            </Col>
+            </Row>
+            </Container>
         );
     }
 }

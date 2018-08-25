@@ -12,7 +12,7 @@ export const signup = (formProps, callback) => async dispatch => {
         try {
                 const response = await axios.post('https://auth-base.herokuapp.com/signup', formProps);
                 dispatch({ type: AUTH_USER, payload: response.data.token });
-                localStorage.setItem('token', response.data.token);
+                localStorage.setItem('user', response.data.token );
                 callback();
         } catch(err) {
                 // run if anything goes wrong
@@ -22,7 +22,7 @@ export const signup = (formProps, callback) => async dispatch => {
 
 export const signout = () => {
         // normal synchronous action creator, no need async dispatch
-        localStorage.removeItem('token');
+        localStorage.removeItem('user');
 
         return {
                 type: AUTH_USER,
@@ -34,7 +34,7 @@ export const signin = (formProps, callback) => async dispatch => {
         try {
                 const response = await axios.post('https://auth-base.herokuapp.com/signin', formProps);
                 dispatch({ type: AUTH_USER, payload: response.data.token });
-                localStorage.setItem('token', response.data.token);
+                localStorage.setItem('user', response.data.token );
                 callback();
         } catch(err) {
                 // run if anything goes wrong
