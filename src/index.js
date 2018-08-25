@@ -7,12 +7,9 @@ import reduxThunk from 'redux-thunk';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import reducers from './reducers';
-import App from './components/App';
-import Welcome from './components/Welcome';
-import Signup from './components/auth/Signup';
-import Dashboard from './components/Dashboard';
-import Signout from './components/auth/Signout';
-import Signin from './components/auth/Signin';
+
+import { App, Welcome, Dashboard } from './components';
+import { Signup, Signout, Signin } from './components/auth';
 
 const store = createStore(
   reducers,

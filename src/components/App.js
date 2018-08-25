@@ -1,11 +1,11 @@
-import React from 'react';
-import Header from './Header';
+import React, { Fragment } from 'react';
+import { Header } from './index';
 
-export default ({ children }) => {
+export default function App ({ children }) {
     return (
-        <div>
+        <Fragment>
             <Header />
             { children }
-        </div>
+        </Fragment>
     );
 }
