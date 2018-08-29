@@ -18,33 +18,33 @@ class Signin extends Component {
 
         return (
             <Container fluid>
-            <Row>        
-                <Col>  
-            <form onSubmit={handleSubmit(this.onSubmit)}>
-                <fieldset>
-                    <label>Email</label>
-                    <Field 
-                        name="email"
-                        type="text"
-                        component="input"
-                        autoComplete="none"
-                    />
-                </fieldset>
-                <fieldset>
-                    <label>Password</label>
-                    <Field 
-                        name="password"
-                        type="password"
-                        component="input"
-                    />
-                </fieldset>
-                <div>
-                    { this.props.errorMessage }
-                </div>
-                <Button color="primary">Sign In</Button>
-            </form>
-            </Col>
-            </Row>
+                <Row>        
+                    <Col>  
+                        <form onSubmit={handleSubmit(this.onSubmit)}>
+                            <fieldset>
+                                <label>Email</label>
+                                <Field 
+                                    name="email"
+                                    type="text"
+                                    component="input"
+                                    autoComplete="none"
+                                />
+                            </fieldset>
+                            <fieldset>
+                                <label>Password</label>
+                                <Field 
+                                    name="password"
+                                    type="password"
+                                    component="input"
+                                />
+                            </fieldset>
+                            <div>
+                                { this.props.errorMessage }
+                            </div>
+                            <Button color="primary">Sign In</Button>
+                        </form>
+                    </Col>
+                </Row>
             </Container>
         );
     }
@@ -53,6 +53,7 @@ class Signin extends Component {
 function mapStateToProps(state) {
     return { errorMessage: state.auth.errorMessage };
 }
+
 export default compose(
     connect(mapStateToProps, actions),
     reduxForm({ form: 'signin' })

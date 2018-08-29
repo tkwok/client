@@ -1,18 +1,30 @@
-import React, { Component } from 'react';
-import { mount } from 'enzyme';
-import Signin from '../Signin';
-import App from '../../App';
+import React from 'react';
+import { shallow } from 'enzyme';
+import { createStore, applyMiddleware } from 'redux';
+import { Provider } from 'react-redux';
+import reduxThunk from 'redux-thunk';
+import reducers from '../../../reducers';
 
-let wrapped = '';
+import { Signin } from '../Signin';
+
+let wrapper = '';
+const store = createStore(
+    reducers,
+      { 
+          auth: { authenticated: localStorage.getItem('user') } 
+      },
+    applyMiddleware(reduxThunk)  
+);
 
 beforeEach(() => {
-    wrapped = mount(<App><Signin /></App>);
+    wrapper = shallow(<Provider store={store}><Signin /></Provider>);
 });
 
 afterEach(() => {
-    wrapped.unmount();
+    wrapper.unmount();
 });
 
-it('has', () => {
-    expect(wrapped.find('button').length).toEqual(1);
+it('has a button showing on screen', () => {
+    console.log(wrapper.debug);
+  //  expect(wrapper.find('button').length).toEqual(1);
 });

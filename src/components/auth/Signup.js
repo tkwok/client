@@ -6,17 +6,13 @@ import { Button } from 'reactstrap';
 
 import * as actions from '../../actions';
 
-const required = value => value ? undefined : 'Required'
+const required = value => value ? undefined : 'Required';
 const maxLength = max => value =>
-  value && value.length > max ? `Must be ${max} characters or less` : undefined
-const maxLength15 = maxLength(15)
-const number = value => value && isNaN(Number(value)) ? 'Must be a number' : undefined
-const minValue = min => value =>
-  value && value < min ? `Must be at least ${min}` : undefined
-const minValue18 = minValue(18)
-const email = value =>
+  value && value.length > max ? `Must be ${max} characters or less` : undefined;
+const maxLength15 = maxLength(15);
+const emailValidate = value =>
   value && !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(value) ?
-  'Invalid email address' : undefined
+  'Invalid email address' : undefined;
 
 class Signup extends Component {
 
@@ -44,10 +40,9 @@ class Signup extends Component {
                     <Field 
                         name="email"
                         type="text"
-                        component="input"
                         autoComplete="none"
                         component={renderField}
-                        validate={email}
+                        validate={emailValidate}
                     />
                 </fieldset>
                 <fieldset>
@@ -55,7 +50,6 @@ class Signup extends Component {
                     <Field 
                         name="password"
                         type="password"
-                        component="input"
                         component={renderField}
                         validate={[ required, maxLength15 ]}
                     />
@@ -72,6 +66,7 @@ class Signup extends Component {
 function mapStateToProps(state) {
     return { errorMessage: state.auth.errorMessage };
 }
+
 export default compose(
     connect(mapStateToProps, actions),
     reduxForm({ form: 'signup' })

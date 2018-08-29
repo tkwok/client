@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import requireAuth from './requireAuth';
 class Dashboard extends Component {
     render() {
-        return <div>Dashboard</div>
+        return <Fragment>A Dashboard Shows Here</Fragment>
     }
 }
 
