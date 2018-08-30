@@ -15,8 +15,6 @@ import {
     DropdownMenu,
     DropdownItem } from 'reactstrap';
   
-import './HeaderStyle.css';
-
 class Header extends Component {
     constructor(props) {
         super(props);
