@@ -5,7 +5,7 @@ import { Provider } from 'react-redux';
 import reduxThunk from 'redux-thunk';
 import reducers from '../../../reducers';
 
-import { Signin } from '../Signin';
+import Signin from '../Signin';
 
 let wrapper = '';
 const store = createStore(
@@ -13,7 +13,7 @@ const store = createStore(
       { 
           auth: { authenticated: localStorage.getItem('user') } 
       },
-    applyMiddleware(reduxThunk)  
+    applyMiddleware(reduxThunk) 
 );
 
 beforeEach(() => {

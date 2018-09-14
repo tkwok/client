@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { AUTH_USER, AUTH_ERROR } from './types';
+import { AUTH_USER, AUTH_ERROR, EDIT_USER } from './types';
 
 // action creator
 // return a function instead of an object, a different value type
@@ -30,14 +30,27 @@ export const signout = () => {
         };
 };
 
-export const signin = (formProps, callback) => async dispatch => {
+export const signin = (formProps, callback) => async dispatch => {        
         try {
                 const response = await axios.post('https://auth-base.herokuapp.com/signin', formProps);
                 dispatch({ type: AUTH_USER, payload: response.data.token });
                 localStorage.setItem('user', response.data.token );
+                localStorage.setItem('email', formProps.email);
                 callback();
         } catch(err) {
                 // run if anything goes wrong
                 dispatch({ type: AUTH_ERROR, payload: 'Invalid login' });
+        }
+};
+
+export const edituser = (formProps, callback) => async dispatch => {
+        try {
+                const response = await axios.post('https://auth-base.herokuapp.com/edituser', formProps);
+                dispatch({ type: EDIT_USER, payload: response.data.token });
+                localStorage.setItem('user', response.data.token );
+                callback();
+        } catch(err) {
+                // run if anything goes wrong
+                dispatch({ type: EDIT_USER, payload: 'Invalid login' });
         }
 };

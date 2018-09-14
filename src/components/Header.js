@@ -30,17 +30,22 @@ class Header extends Component {
         });
     };
 
-    renderLinks() {
+    renderLinks() {        
         if (this.props.authenticated) {
+
+            const email = localStorage.getItem('email') || 'User';
             return (
                 <Fragment>
+                    <NavItem>
+                        <NavLink tag={Link} to={'/dashboard'}>Dashboard</NavLink>
+                    </NavItem>
                     <UncontrolledDropdown nav inNavbar>
                         <DropdownToggle nav caret>
-                            Options
+                            { email }
                         </DropdownToggle>
                         <DropdownMenu right>
-                            <DropdownItem tag={Link} to={'/dashboard'}>
-                                Dashboard
+                            <DropdownItem tag={Link} to={'/editprofile'}>
+                                Edit Profile
                             </DropdownItem>
                             <DropdownItem divider />
                             <DropdownItem tag={Link} to={'/signout'}>
@@ -77,8 +82,6 @@ class Header extends Component {
                     </Collapse>
                 </Navbar>
             </Fragment>
-
-
         );
     }
 }

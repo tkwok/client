@@ -2,9 +2,15 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import App from '../App';
 import Header from '../Header';
-import Welcome from '../Welcome';
+import Welcome from '../views/Welcome';
 import { Signin, Signout, Signup } from '../auth';
 let wrapper;
+
+// it('renders without crashing', () => {
+//   const div = document.createElement('div');
+//   ReactDOM.render(<App />, div);
+//   ReactDOM.unmountComponentAtNode(div);
+// });
 
 it('shows the Header component', () => {
   wrapper = shallow(<App />);

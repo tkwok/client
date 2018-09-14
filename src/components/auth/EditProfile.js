@@ -5,7 +5,8 @@ import { connect } from 'react-redux';
 import { Button, Container, Row, Col } from 'reactstrap';
 
 import * as actions from '../../actions';
-class Signin extends Component {
+
+class EditProfile extends Component {
 
     onSubmit = (formProps) => {
         this.props.signin(formProps, () => {
@@ -18,24 +19,17 @@ class Signin extends Component {
 
         return (
             <Container fluid>
-                <Row>        
-                    <Col xs="!2">  
+                <Row>
+                    <Col xs="12">
+                        <h1>Edit Profile</h1>
                         <form onSubmit={handleSubmit(this.onSubmit)}>
                             <fieldset>
-                                <label>Email</label>
+                                <label>Full name</label>
                                 <Field 
-                                    name="email"
+                                    name="name"
                                     type="text"
                                     component="input"
                                     autoComplete="none"
-                                />
-                            </fieldset>
-                            <fieldset>
-                                <label>Password</label>
-                                <Field 
-                                    name="password"
-                                    type="password"
-                                    component="input"
                                 />
                             </fieldset>
                             <div>
@@ -46,7 +40,7 @@ class Signin extends Component {
                     </Col>
                 </Row>
             </Container>
-        );
+        )
     }
 }
 
@@ -56,5 +50,5 @@ function mapStateToProps(state) {
 
 export default compose(
     connect(mapStateToProps, actions),
-    reduxForm({ form: 'signin' })
-)(Signin);
+    reduxForm({ form: 'editprofile' })
+)(EditProfile);
