@@ -1,6 +1,6 @@
 import Dashboard from './Dashboard';
-import Welcome from './Welcome';
+import Landing from './Landing';
 
 export {
-    Dashboard, Welcome
+    Dashboard, Landing
 };

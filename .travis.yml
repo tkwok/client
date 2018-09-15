@@ -1,20 +1,22 @@
-{
-  "os": "linux",
-  "git": {
-    "depth": 5
-  },
-  "dist": "trusty",
-  "cache": {
-    "directories": [
-      "node_modules"
-    ]
-  },
-  "group": "stable",
-  "script": [
-    "npm run build",
-    "npm run test"
-  ],
-  "install": "npm i",
-  "node_js": "stable",
-  "language": "node_js"
-}
+--- # travis YAML configuration
+os: linux
+git:
+  depth: 5
+dist: trusty
+cache:
+  directories:
+  - node_modules
+group: stable
+script:
+- npm run build
+- npm run test
+install: npm i
+node_js: stable
+language: node_js
+deploy:
+  provider: heroku
+  api_key:
+    secure: 0d1b4c2c-4812-441e-80c3-971a63ae6a51
+  app: client
+  on:
+    repo: tkwok/client
