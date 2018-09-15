@@ -2,7 +2,7 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import App from '../App';
 import Header from '../Header';
-import Welcome from '../views/Welcome';
+import Landing from '../views/Landing';
 import { Signin, Signout, Signup } from '../auth';
 let wrapper;
 
@@ -18,8 +18,8 @@ it('shows the Header component', () => {
 });
 
 it('shows the Welcome component', () => {
-  wrapper = shallow(<App><Welcome /></App>);
-  expect(wrapper.find(Welcome).length).toEqual(1);
+  wrapper = shallow(<App><Landing /></App>);
+  expect(wrapper.find(Landing).length).toEqual(1);
 });
 
 it('shows the Signin component', () => {

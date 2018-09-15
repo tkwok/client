@@ -3,9 +3,7 @@ import ReactDOM from 'react-dom';
 import { BrowserRouter, Route } from 'react-router-dom';
 
 import { App } from './components';
-
 import { Landing, Dashboard } from './components/views';
-
 import { Signup, Signout, Signin, EditProfile } from './components/auth';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
