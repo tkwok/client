@@ -2,11 +2,7 @@ import React, { Component } from 'react';
 import { Container, Row, Col } from 'reactstrap';
 import requireAuth from '../requireAuth';
 
-class Dashboard extends Component {
-    constructor(props) {
-        super(props);
-    }
-    
+class Dashboard extends Component {    
     render() {
         const email = localStorage.getItem('email') || 'User';
 
