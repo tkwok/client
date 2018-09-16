@@ -1,0 +1,7 @@
+{
+    "name": "Client",
+    "description": "Client React/Redux App",
+    "repository": "https://github.com/tkwok/client",
+    "logo": "https://client-auth-base.herokuapp.com/favicon.ico",
+    "keywords": ["react", "redux", "oauth", "enzyme"]
+}

@@ -1,6 +1,7 @@
 {
   "name": "client",
   "version": "0.1.0",
+  "homepage": "https://client-auth-base.herokuapp.com/",
   "private": true,
   "engineStrict": true,
   "engines": {
