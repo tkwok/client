@@ -7,7 +7,7 @@ import reduxThunk from 'redux-thunk';
 import Dashboard from '../Dashboard';
 import reducers from '../../../reducers';
 
-const defaultProps = { success: false };
+const defaultProps = {};
 
 const store = createStore(
     reducers,
@@ -23,7 +23,7 @@ const setup = (props = {}) => {
 };
 
 test('renders without error', () => {
-    const wrapper = setup({ success: false });
+    const wrapper = setup(defaultProps);
     const component = findByTestAttr(wrapper, 'component-dashboard');
     console.log(wrapper.debug());
 });

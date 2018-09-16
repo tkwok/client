@@ -5,9 +5,6 @@ import requireAuth from '../requireAuth';
 class Dashboard extends Component {
     constructor(props) {
         super(props);
-        this.setState({
-            success: false
-        });
     }
     
     render() {
