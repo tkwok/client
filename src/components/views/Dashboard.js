@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Container, Row, Col } from 'reactstrap';
+import { Container, Row, Col, Button } from 'reactstrap';
 import requireAuth from '../requireAuth';
 
 class Dashboard extends Component {    
@@ -12,6 +12,7 @@ class Dashboard extends Component {
                     <Col xs='12'>
                         <h1>Dashboard</h1>
                         <h5>{ email }</h5>
+                        <Button color="danger">Click Me</Button>
                     </Col>
                 </Row>
             </Container>

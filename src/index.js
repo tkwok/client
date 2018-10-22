@@ -7,6 +7,7 @@ import { Landing, Dashboard } from './components/views';
 import { Signup, Signout, Signin, EditProfile } from './components/auth';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
+import './styles/css/main.css';
 
 ReactDOM.render(
     <BrowserRouter>
