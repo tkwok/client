@@ -13,7 +13,8 @@ import {
     UncontrolledDropdown,
     DropdownToggle,
     DropdownMenu,
-    DropdownItem } from 'reactstrap';
+    DropdownItem, 
+    Button } from 'reactstrap';
   
 class Header extends Component {
     constructor(props) {
@@ -29,7 +30,7 @@ class Header extends Component {
           isOpen: !this.state.isOpen
         });
     };
-
+    
     renderLinks() {        
         if (this.props.authenticated) {
 
@@ -59,7 +60,7 @@ class Header extends Component {
             return (
                 <Fragment>
                     <NavItem>
-                        <NavLink tag={Link} to={'/signup'}>Sign up</NavLink>
+                        <Button color="danger" tag={Link} to={'/signup'}>Sign up</Button>
                     </NavItem>
                     <NavItem>
                         <NavLink tag={Link} to={'/signin'}>Sign in</NavLink>
@@ -72,7 +73,7 @@ class Header extends Component {
     render() {
         return (
             <Fragment>
-                <Navbar color="dark" dark expand="md">
+                <Navbar expand="sm">
                     <NavbarBrand tag={Link} to={'/'}>Client</NavbarBrand>
                     <NavbarToggler onClick={this.toggle} />
                     <Collapse isOpen={this.state.isOpen} navbar>

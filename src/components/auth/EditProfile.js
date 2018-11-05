@@ -7,13 +7,12 @@ import { Button, Container, Row, Col } from 'reactstrap';
 import * as actions from '../../actions';
 
 class EditProfile extends Component {
-
     onSubmit = (formProps) => {
         this.props.signin(formProps, () => {
             this.props.history.push('/dashboard');
         });
     }
-
+    
     render() {
         const { handleSubmit } = this.props;
 
@@ -44,6 +43,11 @@ class EditProfile extends Component {
     }
 }
 
+/**
+ * Map State to Props function for Redux
+ * @param {object} state 
+ * @returns {object} errorMessage
+ */
 function mapStateToProps(state) {
     return { errorMessage: state.auth.errorMessage };
 }

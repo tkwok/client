@@ -1,0 +1,30 @@
+$gray-base: #000 !default;
+$gray-darker: lighten($gray-base, 13.5%) !default;
+$gray-dark: lighten($gray-base, 20%) !default;
+$gray: lighten($gray-base, 33.5%) !default;
+$gray-light: lighten($gray-base, 46.7%) !default;
+$gray-lighter: lighten($gray-base, 93.5%) !default;
+
+$white: #fff;
+
+.color-white {
+    color: $white;
+}
+
+$primary-colors: ( // Define your colour map
+   'cyan': (#B2EBF2, #80DEEA, #4DD0E1, #26C6DA, #00BCD4, #00ACC1),
+   'blue': (#B2EBF2, #80DEEA, #4DD0E1, #26C6DA, #00BCD4, #00ACC1)
+);
+
+@each $map in $primary-colors {
+    $name: nth($map, 1); // Returns the name of the map
+    $map: map-get($primary-colors, $name); // Returns a sub-map
+    $i: 0; // For your class naming
+
+    @each $color in $map {
+        $i: $i+1; // Increase the iteration value
+        .color-#{$name}-#{$i*100} {
+            color: $color;
+        }
+    }
+}
