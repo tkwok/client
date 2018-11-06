@@ -4,7 +4,7 @@ import { Provider } from 'react-redux';
 import reduxThunk from 'redux-thunk';
 import reducers from '../reducers';
 
-import { Header } from './index';
+import { Header, Footer } from './index';
 
 export default function App ({ children }) {
     const store = createStore(
@@ -20,6 +20,7 @@ export default function App ({ children }) {
             <Fragment>
                 <Header />
                 { children }
+                <Footer />
             </Fragment>
         </Provider>
     );

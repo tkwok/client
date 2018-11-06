@@ -2,9 +2,10 @@ import React, { Component } from 'react';
 import { reduxForm, Field } from 'redux-form';
 import { compose } from 'redux';
 import { connect } from 'react-redux';
-import { Button } from 'reactstrap';
-
+import { Container, Button, Row, Col } from 'reactstrap';
 import * as actions from '../../actions';
+
+import Hero from '../common/Hero';
 
 const required = value => value ? undefined : 'Required';
 const maxLength = max => value =>
@@ -34,31 +35,38 @@ class Signup extends Component {
         );
 
         return (
-            <form onSubmit={handleSubmit(this.onSubmit)}>
-                <fieldset>
-                    <label>Email</label>
-                    <Field 
-                        name="email"
-                        type="text"
-                        autoComplete="none"
-                        component={renderField}
-                        validate={emailValidate}
-                    />
-                </fieldset>
-                <fieldset>
-                    <label>Password</label>
-                    <Field 
-                        name="password"
-                        type="password"
-                        component={renderField}
-                        validate={[ required, maxLength15 ]}
-                    />
-                </fieldset>
-                <div>
-                    { this.props.errorMessage }
-                </div>
-                <Button color="primary">Sign Up</Button>
-            </form>
+            <Container fluid>
+                <Hero />
+                <Row>
+                    <Col>
+                        <form onSubmit={handleSubmit(this.onSubmit)}>
+                            <fieldset>
+                                <label>Email</label>
+                                <Field 
+                                    name="email"
+                                    type="text"
+                                    autoComplete="none"
+                                    component={renderField}
+                                    validate={emailValidate}
+                                />
+                            </fieldset>
+                            <fieldset>
+                                <label>Password</label>
+                                <Field 
+                                    name="password"
+                                    type="password"
+                                    component={renderField}
+                                    validate={[ required, maxLength15 ]}
+                                />
+                            </fieldset>
+                            <div>
+                                { this.props.errorMessage }
+                            </div>
+                            <Button color="primary">Sign Up</Button>
+                        </form>
+                    </Col>
+                </Row>
+            </Container>
         );
     }
 }

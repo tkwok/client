@@ -1,3 +1,30 @@
 body > footer {
     @extend .ptsans55;
 }
+
+.footer {
+    padding: 80px 0;
+    background-color: #484b58;
+
+    ul li {
+        padding: 10px 0;
+        color: $white;
+        a {
+            color: $gray-light;
+            text-decoration: none;
+            padding-left: 10px;
+        }
+        a:hover {
+            color: $white;
+        }
+    }
+
+    @media screen and (max-width: $break-large) {
+        ul li {
+            text-align: center;
+            a {
+                padding-left: 0;
+            }
+        }
+    }
+}

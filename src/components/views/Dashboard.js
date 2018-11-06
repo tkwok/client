@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
-import { Container, Row, Col, Button } from 'reactstrap';
+import { Container, Row, Col } from 'reactstrap';
 import requireAuth from '../requireAuth';
-
 import { geoMercator, geoPath } from 'd3-geo';
-
 import worlddata from '../../data/world';
 
 class Dashboard extends Component {    
@@ -20,12 +18,15 @@ class Dashboard extends Component {
 
         return (
             <Container fluid data-test="component-dashboard">
+            <Row className="header-image-dashboard center color-white">
+                <Col>
+                   <h1><b>Dashboard</b></h1>
+                   <h2>{ email }</h2>
+                </Col>
+            </Row>
                 <Row>
                     <Col xs='12'>
-                        <h1>Dashboard</h1>
-                        <h5>{ email }</h5>
-                        <Button color="danger">Click Me</Button>
-                        <svg width={500} height={500}>{countries}</svg>
+                        <svg style={{width: '100%', height:'800px'}} >{countries}</svg>
                     </Col>
                 </Row>
             </Container>

@@ -3,6 +3,7 @@ import { reduxForm, Field } from 'redux-form';
 import { compose } from 'redux';
 import { connect } from 'react-redux';
 import { Button, Container, Row, Col } from 'reactstrap';
+import Hero from '../common/Hero';
 
 import * as actions from '../../actions';
 class Signin extends Component {
@@ -18,6 +19,7 @@ class Signin extends Component {
 
         return (
             <Container fluid>
+                <Hero />
                 <Row>        
                     <Col xs="!2">  
                         <form onSubmit={handleSubmit(this.onSubmit)}>
