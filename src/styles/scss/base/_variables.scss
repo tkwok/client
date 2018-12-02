@@ -7,14 +7,16 @@ $gray-lighter: lighten($gray-base, 93.5%) !default;
 
 $white: #fff;
 
+$break-lg: 992px;
+$break-md: 767px;
+$break-sm: 574px;
 
-$break-large: 992px;
 
 .color-white {
     color: $white;
 }
 
-$primary-colors: ( // Define your colour map
+$primary-colors: ( // Define your color map
    'cyan': (#B2EBF2, #80DEEA, #4DD0E1, #26C6DA, #00BCD4, #00ACC1),
    'blue': (#B2EBF2, #80DEEA, #4DD0E1, #26C6DA, #00BCD4, #00ACC1)
 );

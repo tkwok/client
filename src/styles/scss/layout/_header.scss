@@ -40,13 +40,35 @@ nav {
     border-color: $white;
 }
 
-@media screen and (max-width: $break-large) {
+@media screen and (max-width: $break-lg) {
     %center-base {
         display: flex;
         justify-content: center;
     }
 }
 
-.collapse.show {
-    background-color: red;
+@media screen and (max-width: $break-sm) {
+  .header-image {
+    margin-top: 0;
+  }
+  .navbar-expand-sm {
+    background-color: $gray;
+  }
+  .dropdown-menu {
+    border: 0;
+    background-color: $gray;
+    .dropdown-item {
+      color: $white;
+    }
+    .dropdown-divider {
+      border: 0;
+    }
+  }
 }
+
+.navbar-toggler {
+  border: 0;
+}
+
+
+button:focus {outline:0;}

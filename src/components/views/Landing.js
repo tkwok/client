@@ -16,13 +16,13 @@ export default function Welcome () {
                 </Col>
             </Row>
             <Row>
-                <Col className="center">
+                <Col className="center" sm={12} md={4}>
                     <h4>Column One</h4>
                 </Col>
-                <Col className="center">
+                <Col className="center" sm={12} md={4}>
                     <h4>Column Two</h4>
                 </Col>
-                <Col className="center">
+                <Col className="center" sm={12} md={4}>
                     <h4>Column Three</h4>
                 </Col>
             </Row>
