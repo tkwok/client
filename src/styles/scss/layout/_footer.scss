@@ -6,7 +6,8 @@ body > footer {
     padding: 80px 0;
     background-color: #484b58;
 
-    ul li {
+    ul {
+      li {
         padding: 10px 0;
         color: $white;
         a {
@@ -17,14 +18,20 @@ body > footer {
         a:hover {
             color: $white;
         }
+      }
+      li:first-child {
+        font-weight: bolder;
+        font-size: 1.1em;
+      }
     }
 
     @media screen and (max-width: $break-lg) {
         ul li {
-            text-align: center;
-            a {
-                padding-left: 0;
-            }
+          text-align: center;
+          a {
+            padding-left: 0;
+            color: $white;
+          }
         }
     }
 }

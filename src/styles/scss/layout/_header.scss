@@ -40,6 +40,29 @@ nav {
     border-color: $white;
 }
 
+.dropdown-menu {
+  border: 0;
+  background-color: transparent;
+  .dropdown-divider {
+    border: 0;
+  }
+}
+
+.nav-item { 
+  .nav-link {
+    text-align: center;
+  }  
+  a.dropdown-item {
+    color: $white;
+    text-align: right;
+    &:hover {
+      background-color: transparent;
+    }
+  }
+}
+
+
+
 @media screen and (max-width: $break-lg) {
     %center-base {
         display: flex;
@@ -57,11 +80,17 @@ nav {
   .dropdown-menu {
     border: 0;
     background-color: $gray;
-    .dropdown-item {
-      color: $white;
-    }
     .dropdown-divider {
       border: 0;
+    }
+  }
+  .nav-item { 
+    .nav-link {
+      text-align: center;
+    }  
+    a.dropdown-item {
+      color: $white;
+      text-align: center;
     }
   }
 }
@@ -71,3 +100,6 @@ nav {
 }
 
 
+#root {
+  overflow-x: hidden;
+}
