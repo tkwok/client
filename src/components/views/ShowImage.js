@@ -90,8 +90,4 @@ const floating = {
     opacity: '0.8'
 };
 
-const parent = {
-    position: 'relative'
-}
-
 export default requireAuth(ShowImage);
