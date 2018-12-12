@@ -23,7 +23,6 @@ export const signup = (formProps, callback) => async dispatch => {
 export const signout = () => {
     // normal synchronous action creator, no need async dispatch
     localStorage.removeItem('user');
-
     return {
         type: AUTH_USER,
         payload: ''
@@ -50,12 +49,12 @@ export const signin = (formProps, callback) => async dispatch => {
  */
 export const edituser = (formProps, callback) => async dispatch => {
     try {
-            const response = await axios.post('https://auth-base.herokuapp.com/edituser', formProps);
-            dispatch({ type: EDIT_USER, payload: response.data.token });
-            localStorage.setItem('user', response.data.token );
-            callback();
+        const response = await axios.post('https://auth-base.herokuapp.com/edituser', formProps);
+        dispatch({ type: EDIT_USER, payload: response.data.token });
+        localStorage.setItem('user', response.data.token );
+        callback();
     } catch(err) {
-            // run if anything goes wrong
-            dispatch({ type: EDIT_USER, payload: 'Invalid login' });
+        // run if anything goes wrong
+        dispatch({ type: EDIT_USER, payload: 'Invalid login' });
     }
 };

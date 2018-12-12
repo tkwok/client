@@ -1,8 +1,4 @@
-import Signin from './Signin';
-import Signout from './Signout';
-import Signup from './Signup';
-import EditProfile from './EditProfile';
-
-export {
-    Signin, Signout, Signup, EditProfile
-};
+export { default as Signin } from './Signin';
+export { default as Signout } from './Signout';
+export { default as Signup } from './Signup';
+export { default as EditProfile } from './EditProfile';

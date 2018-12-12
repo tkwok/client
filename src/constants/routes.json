@@ -1,0 +1,51 @@
+[
+    {
+        "id": 0,
+        "title": "Home",
+        "path": "/",
+        "component": "Landing",
+        "exact": true
+    },
+    {
+        "id": 1,
+        "title": "Sign Up",
+        "path": "/signup",
+        "component": "Signup",
+        "exact": true
+    },
+    {
+        "id": 2,
+        "title": "Sign Out",
+        "path": "/signout",
+        "component": "Signout",
+        "exact": true
+    },  
+    {
+        "id": 3,
+        "title": "Sign In",
+        "path": "/signin",
+        "component": "Signin",
+        "exact": true
+    },  
+    {
+        "id": 4,
+        "title": "Dashboard",
+        "path": "/dashboard",
+        "component": "Dashboard",
+        "exact": true
+    }, 
+    {
+        "id": 5,
+        "title": "Edit User Profile",
+        "path": "/editprofile",
+        "component": "Editprofile",
+        "exact": true
+    },
+    {
+        "id": 6,
+        "title": "Show Image",
+        "path": "/showimage",
+        "component": "ShowImage",
+        "exact": true
+    }
+]
