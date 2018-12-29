@@ -61,8 +61,6 @@ nav {
   }
 }
 
-
-
 @media screen and (max-width: $break-lg) {
     %center-base {
         display: flex;
@@ -85,9 +83,7 @@ nav {
     }
   }
   .nav-item { 
-    .nav-link {
-      text-align: center;
-    }  
+    text-align: center;
     a.dropdown-item {
       color: $white;
       text-align: center;
@@ -98,7 +94,6 @@ nav {
 .navbar-toggler {
   border: 0;
 }
-
 
 #root {
   overflow-x: hidden;

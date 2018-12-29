@@ -60,7 +60,7 @@ class Header extends Component {
             return (
                 <Fragment>
                     <NavItem>
-                        <Button color="danger" tag={Link} to={'/signup'}>Sign up</Button>
+                        <Button className="nav-button" color="danger" tag={Link} to={'/signup'}>Sign up</Button>
                     </NavItem>
                     <NavItem>
                         <NavLink tag={Link} to={'/signin'}>Sign in</NavLink>
