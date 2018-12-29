@@ -26,14 +26,6 @@ class Signup extends Component {
     render() {
         const { handleSubmit } = this.props;
 
-        const renderField = ({ input, label, type, meta: { touched, error, warning } }) => (
-            <span>
-              <label>{label}</label>
-                <input {...input} placeholder={label} type={type}/>
-                {touched && ((error && <span>{error}</span>) || (warning && <span>{warning}</span>))}
-            </span>
-        );
-
         return (
             <Container fluid>
                 <Hero />
@@ -46,7 +38,6 @@ class Signup extends Component {
                                     name="email"
                                     type="text"
                                     autoComplete="none"
-                                    component={renderField}
                                     validate={emailValidate}
                                 />
                             </fieldset>
@@ -55,7 +46,6 @@ class Signup extends Component {
                                 <Field 
                                     name="password"
                                     type="password"
-                                    component={renderField}
                                     validate={[ required, maxLength15 ]}
                                 />
                             </fieldset>
