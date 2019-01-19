@@ -29,6 +29,7 @@ class Signup extends Component {
         return (
             <Container fluid>
                 <Hero />
+                <Container>
                 <Row>
                     <Col>
                         <form onSubmit={handleSubmit(this.onSubmit)}>
@@ -37,6 +38,7 @@ class Signup extends Component {
                                 <Field 
                                     name="email"
                                     type="text"
+                                    component="input"
                                     autoComplete="none"
                                     validate={emailValidate}
                                 />
@@ -46,16 +48,19 @@ class Signup extends Component {
                                 <Field 
                                     name="password"
                                     type="password"
+                                    component="input"
                                     validate={[ required, maxLength15 ]}
                                 />
                             </fieldset>
                             <div>
                                 { this.props.errorMessage }
                             </div>
+
                             <Button color="primary">Sign Up</Button>
                         </form>
                     </Col>
                 </Row>
+                </Container>
             </Container>
         );
     }

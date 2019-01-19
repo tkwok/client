@@ -6,6 +6,8 @@ import { Button, Container, Row, Col } from 'reactstrap';
 
 import * as actions from '../../actions';
 
+import Hero from '../common/Hero';
+
 class EditProfile extends Component {
     onSubmit = (formProps) => {
         this.props.signin(formProps, () => {
@@ -18,6 +20,7 @@ class EditProfile extends Component {
 
         return (
             <Container fluid>
+                <Hero />
                 <Row>
                     <Col xs="12">
                         <h1>Edit Profile</h1>

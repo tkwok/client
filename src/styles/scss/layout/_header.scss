@@ -61,6 +61,11 @@ nav {
   }
 }
 
+.container-fluid {
+  padding-right: 0;
+  padding-left: 0;
+}
+
 @media screen and (max-width: $break-lg) {
     %center-base {
         display: flex;
@@ -86,7 +91,6 @@ nav {
     text-align: center;
     a.dropdown-item {
       color: $white;
-      text-align: center;
     }
   }
 }

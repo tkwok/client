@@ -25,6 +25,8 @@ const componentRegistry = {
 const Routes = 
     routesData ? 
         routesData.map((route) => {
+            console.log(route.component);
+            console.log(componentRegistry[route.component]);
             return (
                 <Route
                     key={route.id} 

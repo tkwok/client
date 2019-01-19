@@ -38,7 +38,7 @@
         "id": 5,
         "title": "Edit User Profile",
         "path": "/editprofile",
-        "component": "Editprofile",
+        "component": "EditProfile",
         "exact": true
     },
     {

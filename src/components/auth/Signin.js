@@ -3,9 +3,10 @@ import { reduxForm, Field } from 'redux-form';
 import { compose } from 'redux';
 import { connect } from 'react-redux';
 import { Button, Container, Row, Col } from 'reactstrap';
+import * as actions from '../../actions';
+
 import Hero from '../common/Hero';
 
-import * as actions from '../../actions';
 class Signin extends Component {
 
     onSubmit = (formProps) => {
@@ -20,11 +21,12 @@ class Signin extends Component {
         return (
             <Container fluid>
                 <Hero />
+                <Container>
                 <Row>        
-                    <Col xs="!2">  
+                    <Col xs="12">  
                         <form onSubmit={handleSubmit(this.onSubmit)}>
                             <fieldset>
-                                <label>Email</label>
+                                <label>Email address</label>
                                 <Field 
                                     name="email"
                                     type="text"
@@ -43,10 +45,19 @@ class Signin extends Component {
                             <div>
                                 { this.props.errorMessage }
                             </div>
+
+                            <Row>
+                                <Col>
                             <Button color="primary">Sign In</Button>
+                            </Col>
+                            <Col>
+                            <Button color="primary">Clear</Button>
+                            </Col>
+                            </Row>
                         </form>
                     </Col>
                 </Row>
+                </Container>
             </Container>
         );
     }
