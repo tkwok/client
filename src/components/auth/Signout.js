@@ -14,7 +14,7 @@ class Signout extends Component {
         return (
             <Container fluid>
                 <Hero />
-                <div>Sorry to see you go!</div>
+                <div>Logged out thank you</div>
             </Container>
         );
     }

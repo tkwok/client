@@ -48,11 +48,11 @@ class Signin extends Component {
 
                             <Row>
                                 <Col>
-                            <Button color="primary">Sign In</Button>
-                            </Col>
-                            <Col>
-                            <Button color="primary">Clear</Button>
-                            </Col>
+                                    <Button color="primary">Sign In</Button>
+                                </Col>
+                                <Col>
+                                    <Button color="primary">Clear</Button>
+                                </Col>
                             </Row>
                         </form>
                     </Col>

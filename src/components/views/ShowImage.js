@@ -81,7 +81,6 @@ class ShowImage extends Component {
 
 
 const floating = {
-
     backgroundColor: '#ffffa5',
     padding: 20,
     border: '1px solid #000',
