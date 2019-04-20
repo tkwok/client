@@ -52,7 +52,6 @@ class Dashboard extends Component {
                 </Row>
                 <Row>
                     <Col xs='12' lg='4'>
-
                         <svg width={width} height={height}>
                             <g transform={`translate(${width / 2}, ${height / 2})`}>
                                 {data.map(d => (
@@ -65,10 +64,8 @@ class Dashboard extends Component {
                                 ))}
                             </g>
                         </svg>
-
                     </Col>
                 </Row>
-
             </Container>
         );
     }

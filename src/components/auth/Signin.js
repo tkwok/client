@@ -9,6 +9,12 @@ import Hero from '../common/Hero';
 
 class Signin extends Component {
 
+    /**
+     * 
+     * 
+     * 
+     * @memberOf Signin
+     */
     onSubmit = (formProps) => {
         this.props.signin(formProps, () => {
             this.props.history.push('/dashboard');
@@ -48,7 +54,7 @@ class Signin extends Component {
 
                             <Row>
                                 <Col>
-                                    <Button color="primary">Sign In</Button>
+                                    <Button color="primary">Sign in</Button>
                                 </Col>
                                 <Col>
                                     <Button color="primary">Clear</Button>

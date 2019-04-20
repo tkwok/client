@@ -4,13 +4,8 @@ import App from '../App';
 import Header from '../Header';
 import Landing from '../views/Landing';
 import { Signin, Signout, Signup } from '../auth';
-let wrapper;
 
-// it('renders without crashing', () => {
-//   const div = document.createElement('div');
-//   ReactDOM.render(<App />, div);
-//   ReactDOM.unmountComponentAtNode(div);
-// });
+let wrapper = {};
 
 it('shows the Header component', () => {
   wrapper = shallow(<App />);
