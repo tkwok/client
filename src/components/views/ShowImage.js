@@ -73,7 +73,6 @@ class ShowImage extends Component {
                         </Fragment>
                     </Col>
                 </Row>
-
             </Container>
         )
     }

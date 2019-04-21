@@ -26,9 +26,16 @@ class EditProfile extends Component {
                         <h1>Edit Profile</h1>
                         <form onSubmit={handleSubmit(this.onSubmit)}>
                             <fieldset>
-                                <label>Full name</label>
+                                <label>Display name</label>
                                 <Field 
                                     name="name"
+                                    type="text"
+                                    component="input"
+                                    autoComplete="none"
+                                />
+                                <label>Phone number</label>
+                                <Field 
+                                    name="phone"
                                     type="text"
                                     component="input"
                                     autoComplete="none"
@@ -37,7 +44,7 @@ class EditProfile extends Component {
                             <div>
                                 { this.props.errorMessage }
                             </div>
-                            <Button color="primary">Sign In</Button>
+                            <Button color="primary">Save profile</Button>
                         </form>
                     </Col>
                 </Row>

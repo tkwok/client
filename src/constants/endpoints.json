@@ -2,5 +2,5 @@
     "baseUrl": "https://auth-base.herokuapp.com",
     "signInUrl": "/signin",
     "signOutUrl": "/signout",
-    
+    "profileUrl": "/users/id/profile"
 }
